@@ -51,8 +51,8 @@ def get_gpt3_response(prompt):
 def handle_message(data):
     message = data['message']
     username = data['username']
-    if message.startswith("/chat"):
-        prompt = message.replace("/chat", "").strip()
+    if message.startswith("/GPT"):
+        prompt = message.replace("/GPT", "").strip()
         emit('message', {'username': "Chat Bot", 'message': "Typing..."}, broadcast=True)
         time.sleep(2)
         response = get_gpt3_response(prompt)
