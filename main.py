@@ -31,7 +31,7 @@ def index(username):
 
 
 
-openai.api_key = 'YOUR API KEY'
+openai.api_key = 'your API KEY'
 
 def get_gpt3_response(prompt):
     try:
@@ -51,9 +51,9 @@ def get_gpt3_response(prompt):
 def handle_message(data):
     message = data['message']
     username = data['username']
-    if message.startswith("/צאט"):
-        prompt = message.replace("/צאט", "").strip()
-        emit('message', {'username': "Chat Bot", 'message': "מקליד..."}, broadcast=True)
+    if message.startswith("/chat"):
+        prompt = message.replace("/chat", "").strip()
+        emit('message', {'username': "Chat Bot", 'message': "Typing..."}, broadcast=True)
         time.sleep(2)
         response = get_gpt3_response(prompt)
         emit('message', {'username': "Chat Bot", 'message': response}, broadcast=True)
