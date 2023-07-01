@@ -31,7 +31,7 @@ def index(username):
 
 
 
-openai.api_key = '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'
+openai.api_key = 'YOUR API KEY'
 
 def get_gpt3_response(prompt):
     try:
