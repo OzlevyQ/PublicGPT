@@ -1,4 +1,4 @@
-# Public Chat with GPT
+# Public Chat with GPT (archive 2020)
 
 Welcome to our public chat! This repository contains a chat application built using Flask, Flask-SocketIO, and OpenAI's GPT-3.5 language model. It allows multiple participants to engage in real-time conversations and interact with our intelligent chatbot.
 
